@@ -1,0 +1,92 @@
+*{
+    color: #fff;
+}
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #282a2c;
+    padding: 25px 15px;
+}
+
+
+.sidebar img {
+    width: 20px;
+    fill: #ffffff;
+}
+
+.menu , .plus ,.denote-img{
+    filter: brightness(0) invert(1); /* This will make the image white */
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    
+}
+
+.sidebar .new-chat {
+    display: inline-flex;
+    margin-top: 40px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #3c3e41;
+    border-radius: 50px;
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;;
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeIn 1.5s;
+}
+.sidebar .recent-title {
+    margin: 30px 0 20px 0;
+    
+}
+
+.sidebar .recent-entry p {
+    color: #cfcaca; /* Ensure the text color is set to black or any other visible color */
+    white-space: normal; /* Allows the text to wrap */
+    word-break: keep-all;
+  }
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap : 10px;
+    padding: 10px;
+    padding-right: 20px;
+    border-radius: 50px;
+    color: #dad7d7;
+    cursor: pointer;
+    white-space: normal; /* Allows the text to wrap */
+    word-break: keep-all; /* Prevents breaking words */
+}
+.sidebar .recent-entry:hover {
+    background-color: #454747;
+}
+
+/* Bottom  */
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .bottom-item {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+@media(max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}
