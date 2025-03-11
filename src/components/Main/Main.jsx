@@ -34,6 +34,7 @@ const Main = () => {
     document.querySelector("body").className = mode;
   }, [mode]);
 
+  // for adding title image
   useEffect(() => {
     document.title = "Gemini";
     const favicon = document.getElementById("favicon");
