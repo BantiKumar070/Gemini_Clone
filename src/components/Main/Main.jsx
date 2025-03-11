@@ -32,7 +32,24 @@ const Main = () => {
 
   useEffect(() => {
     document.querySelector("body").className = mode;
-  }, [mode]);
+    document.querySelector("body").style.backgroundColor = mode === "dark-mode" ? "black" : "white";
+    document.querySelector("body").style.color = mode === "dark-mode" ? "white" : "black";
+    
+    const resultDataElement = document.querySelector(".result-data p");
+    if (resultDataElement) {
+      resultDataElement.style.color = mode === "dark-mode" ? "white" : "black";
+    }
+    
+    const resultTitleElement = document.querySelector(".result-title p");
+    if (resultTitleElement) {
+      resultTitleElement.style.color = mode === "dark-mode" ? "white" : "black";
+    }
+    
+    const boldElements = document.querySelectorAll(".result-data p b");
+    boldElements.forEach(element => {
+      element.style.color = mode === "dark-mode" ? "white" : "black";
+    });
+  }, [mode, resultData]);
 
   // for adding title image
   useEffect(() => {
