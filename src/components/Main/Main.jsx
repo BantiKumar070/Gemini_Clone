@@ -40,13 +40,7 @@ const Main = () => {
     const favicon = document.getElementById("favicon");
     if (favicon) {
       favicon.href = assets.gemini_icon; // Set your favicon path here
-    } else {
-      const link = document.createElement("link");
-      link.id = "favicon";
-      link.rel = "icon";
-      link.href = assets.gemini_icon; // Set your favicon path here
-      document.head.appendChild(link);
-    }
+    } 
   }, []);
 
   return (
